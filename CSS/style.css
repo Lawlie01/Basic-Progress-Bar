@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* 13:53 */
+
 /* Flex: Taşıyıcı elemana tanımlanan flex özelliği taşıyıca esneklik kazandırır. Böylece alt elemanlar taşıyıcı içerisinde kolay bir şekilde yerleştirilebilir hale gelir. */
 body {
     font-family: 'Merriweather', serif;
@@ -29,55 +31,82 @@ vw	viewport width yani görüntü alanı genişliğine bağlı bir uzunluk birim
     position: relative;
 }
 
-.fa-quote{
+.fa-quote {
     color: rgba(255, 255, 255, 0.3);
     font-size: 1.5rem;
     position: absolute;
     top: 70px;
 }
 
-.fa-quote-right{
+.fa-quote-right {
     left: 40px;
 }
-.fa-quote-left{
+
+.fa-quote-left {
     right: 40px;
 }
 
-.user-text{
+.user-text {
     line-height: 1.5rem;
     text-align: justify;
 }
 
-.user{
+.user {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 /* object-fit özelliği, bir öğenin içerik kutusunun yüksekliğine ve genişliğine nasıl tepki verdiğini tanımlar. object-position özelliği ile birlikte resimler, videolar vd. medya formatları için tasarlanmıştır. */
-.user-img{
+.user-img {
     border-radius: 50%;
     height: 75px;
     width: 75px;
     object-fit: cover;
 }
 
-.user-details{
+.user-details {
     margin-left: 1rem;
 }
 
+.user .username{
+    margin: 0;
+}
+
+.user .job{
+    margin: 10px 0;
+}
+
+.progress-bar{
+    border-radius: 1rem;
+    height: 4px;
+    background: #ffff;
+    width: 100%;
+    animation: grow 5s linear infinite;
+    transform-origin: left;
+}
+
+@keyframes grow{
+    0%{
+        transform: scale(0);
+    }
+}
+
 /* @media tabletler, iPhone ve Android cihazlara özel stil tanımlamak için kullanılan popüler bir tekniktir.Yani bir sitenin min-width'i 960px diyelim. Eğer farklı çözünürlükte gireceksek siteye media(max-width:960px) o çözünürlüğün altında işlem yapabiliriz. */
-@media(max-width:35rem){
-    /* .fa-quote{
-        display: none;
-    } */
-    .fa-quote-right{
+@media(max-width:35rem) {
+
+    .fa-quote{
+        top: 50px;
+    }
+    .fa-quote-right {
         left: 20px;
     }
-    .fa-quote-left{
+
+    .fa-quote-left {
         right: 20px;
     }
-    .container{
+
+    .container {
         padding: 2rem 3rem;
     }
 }
