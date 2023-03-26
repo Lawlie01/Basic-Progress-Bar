@@ -5,11 +5,11 @@ const userImg = document.querySelector(".user-img")
 const userName = document.querySelector(".username")
 const job = document.querySelector(".job")
 
-const testimonials = [
+const user = [
     {
-        name: 'Ahmet Sadkoğlu',
+        name: 'Ahmet Sadıkoğlu',
         position: 'Front-End Developer',
-        photo: '',
+        photo: '../img/ahmet-sadikoglu.jpg',
         text: `Merhaba Ben Ahmet Sadıkoğlu.25 yaşındayım ve Şişli Endüstri Meslek Lisesi'nde Otomotiv Teknolojisi bölümünden mezun oldum. Stajımı da yine otomotiv sektöründe yaptım. Daha sonra İstanbul Gelişim Üniversitesi'nde Ön Lisans Makine bölümünü bitirdim`
     },
     {
@@ -23,6 +23,32 @@ const testimonials = [
         name: 'Kadir Sadıkoğlu',
         position: 'TV Executive',
         photo: '../img/Kadir-sadikoglu.jpg',
-        text: ''
+        text: `Hi there 
+        I'm a media planner and sometimes a data analyst. I'm trying my best to learn Python these days.
+        I love sharing my knowledge with others. When I'm not coding, you can find me writing about games at ForBuff
+         I’m currently working on something cool 
+         I’m currently learning Python`
     }
 ]
+
+let idx = 1
+
+function updateUser() {
+    // console.log(user[1])
+
+    const { name, position, photo, text } = user[idx]
+    userName.innerHTML = name
+    job.innerHTML = position
+    userImg.src = photo
+    userTxt.innerHTML = text
+
+    idx++
+
+    if (idx > user.length - 1) {
+        idx = 0
+    }
+}
+
+setInterval(updateUser, 10000)
+
+// updateUser()
