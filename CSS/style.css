@@ -69,25 +69,25 @@ vw	viewport width yani görüntü alanı genişliğine bağlı bir uzunluk birim
     margin-left: 1rem;
 }
 
-.user .username{
+.user .username {
     margin: 0;
 }
 
-.user .job{
+.user .job {
     margin: 10px 0;
 }
 
-.progress-bar{
+.progress-bar {
     border-radius: 1rem;
     height: 4px;
     background: #ffff;
     width: 100%;
-    animation: grow 5s linear infinite;
+    animation: grow 10s linear infinite;
     transform-origin: left;
 }
 
-@keyframes grow{
-    0%{
+@keyframes grow {
+    0% {
         transform: scale(0);
     }
 }
@@ -95,9 +95,10 @@ vw	viewport width yani görüntü alanı genişliğine bağlı bir uzunluk birim
 /* @media tabletler, iPhone ve Android cihazlara özel stil tanımlamak için kullanılan popüler bir tekniktir.Yani bir sitenin min-width'i 960px diyelim. Eğer farklı çözünürlükte gireceksek siteye media(max-width:960px) o çözünürlüğün altında işlem yapabiliriz. */
 @media(max-width:35rem) {
 
-    .fa-quote{
+    .fa-quote {
         top: 50px;
     }
+
     .fa-quote-right {
         left: 20px;
     }
